@@ -22,7 +22,7 @@
 .header__theme-menu {
   display: grid;
   justify-content: end;
-  align-items: end;
+  align-items: center;
 }
 
 .header__theme-menu-list {
@@ -145,7 +145,6 @@
   display: grid;
   justify-self: center;
   align-self: center;
-  max-inline-size: 355px;
 }
 
 .title__theme-question {
@@ -162,7 +161,6 @@
   display: grid;
   grid-auto-flow: row;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
 .content__article-text {
@@ -172,6 +170,7 @@
   font-weight: 400;
   line-height: 23.4px;
   text-align: left;
+  margin-bottom: 10px;
 }
 
 .content__article-text-link {
@@ -189,18 +188,13 @@
 
 .content__section {
   display: grid;
-  margin: 0 10px;
+  margin: 0 10px 40px;
   gap: 20px;
 }
 
 .concentrate__hard {
   grid-auto-flow: row;
   padding: 40px 0 0 0;
-}
-
-.concentrate__less {
-  margin: 0 10px;
-  padding: 50px 0;
 }
 
 .title__less {
@@ -214,21 +208,21 @@
 }
 
 .concentrate__better {
-  display: grid;
   grid-auto-flow: row;
-  padding-bottom: 50px;
+}
+
+.content__card-better {
+  display: grid;
+  gap: 20px;
 }
 
 .card__title-point {
+  font-weight: 400;
   margin-bottom: 10px;
-  font-weight: 400px;
 }
 
 .concentrate__images {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
   gap: 10px;
-  margin: 0 10px;
 }
 
 .gallery__item {
@@ -319,8 +313,12 @@
       padding: 50px 0;
   }
 
+  .title__question-less {
+    max-inline-size: 236px;
+  }
+
   .title__less {
-      min-inline-size: 355px;
+      min-inline-size: 315px;
   }
 
   .concentrate__less-container {
@@ -448,6 +446,7 @@
   .content__card-less {
       margin-bottom: 10px;
       min-inline-size: 315px;
+      gap: 10px;
   }
 
   .concentrate__better {
