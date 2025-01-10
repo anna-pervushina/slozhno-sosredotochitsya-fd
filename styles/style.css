@@ -41,8 +41,58 @@
   line-height: 18px;
   text-align: center;
   text-transform: lowercase;
-  color: var(--accent-color);
+  color: var(--dc-color);
   padding: 1.5px 13px;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--dc-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--dc-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--dc-hover-color);
+}
+
+.decor__element {
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color);
+  text-align: center;
+  padding-right: 10px;
+  text-transform: uppercase;
+}
+
+.decor__element::before {
+  content: "REC";
+  position: absolute;
+  color: var(--accent-color);
+  top: 10px;
+  right: 38px;
+  font-family: var(--ibm__font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.decor__element::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 19px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  display: inline-block;
 }
 
 .corner::before {
@@ -50,8 +100,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--dc-color);
+  border-right: 1px solid var(--dc-color);
   inline-size: 25px;
   block-size: 25px;
   margin: 10px;
@@ -62,8 +112,8 @@
   content: "";
   bottom: 0;
   left: 0;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--dc-color);
+  border-left: 1px solid var(--dc-color);
   inline-size: 25px;
   block-size: 25px;
   margin: 10px;
@@ -88,6 +138,7 @@
   font-weight: 700;
   line-height: 23.4px;
   background-color: var(--accent-color);
+  color: var(--title-decor-color);
 }
 
 .header__paragraph {
@@ -102,6 +153,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
+  color: var(--dc-color);
 }
 
 /* основной текстовый контент */
