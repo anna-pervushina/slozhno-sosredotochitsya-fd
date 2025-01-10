@@ -1,16 +1,70 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --ibm__font: 'IBM Plex mono';
+  --bg__image: url(../images/cover-image-dark.png);
+  --accent-color: #FF0070;
+  --title-decor-color: #000028;
+  --title-color: #DB00FF;
+  --content-text-color: #F1B2CE;
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-dark .decor__element {
+  display: grid;
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color);
+  text-align: center;
+  padding-right: 10px;
+  text-transform: uppercase;
+}
+.theme-dark .decor__element::before {
+  content: 'REC';
+  position: absolute;
+  color: var(--accent-color);
+  top: 10px;
+  right: 38px;
+  font-family: var(--ibm__font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.theme-dark .decor__element::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 19px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  display: inline-block;
+}
+
+.theme-dark .header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--accent-color);
+}
+
+.theme-dark .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.theme-dark .header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.theme-dark .title-decor {
+  color: var(--title-decor-color);
+}
+
+.theme-dark .title__theme-question {
+  color: var(--accent-color);
 }
