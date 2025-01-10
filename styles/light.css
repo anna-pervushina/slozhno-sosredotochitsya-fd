@@ -1,13 +1,13 @@
 :root.theme-light {
   /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  Так стили написанные ниже будут иметь больший вес,
+  чем стили в медиазапросе предпочтений пользователя
+*/
   --bg__image: url(../images/cover-image-light.png);
   --content-text-color: #353430;
-  --title-color: #FFC2E6;
-  --accent-color: #FF8DCB;   
-  --hover-color: rgba(50, 49, 45, 0.40);
+  --title-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --hover-color: rgba(50, 49, 45, 0.4);
 }
 
 .theme-light .corner::before {
@@ -49,47 +49,48 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg__image: url(../images/cover-image-light.png);
-    --content-text-color: #353430;
-    --title-color: #FFC2E6;
-    --accent-color: #FF8DCB;   
-    --hover-color: rgba(50, 49, 45, 0.40);
+      --bg__image: url(../images/cover-image-light.png);
+      --content-text-color: #353430;
+      --title-color: #ffc2e6;
+      --accent-color: #ff8dcb;
+      --hover-color: rgba(50, 49, 45, 0.4);
   }
- 
-.theme-light .corner::before {
-  content: "";
-  border-top: 1px solid var(--content-text-color);
-  border-right: 1px solid var(--content-text-color);
+
+  .theme-light .corner::before {
+      content: "";
+      border-top: 1px solid var(--content-text-color);
+      border-right: 1px solid var(--content-text-color);
+  }
+
+  .theme-light .corner::after {
+      content: "";
+      border-bottom: 1px solid var(--content-text-color);
+      border-left: 1px solid var(--content-text-color);
+  }
+
+  .theme-light .header__theme-menu-button {
+      color: var(--content-text-color);
+  }
+
+  .theme-light .header__theme-menu-button:hover {
+      outline: 1px solid var(--hover-color);
+  }
+
+  .theme-light .header__theme-menu-button:focus-visible {
+      text-decoration: underline;
+      outline: none;
+  }
+
+  .theme-light .header__theme-menu-button_active {
+      border: 1px solid var(--content-text-color);
+  }
+
+  .theme-light .title-decor {
+      color: var(--content-text-color);
+  }
+
+  .theme-light .title__theme-question {
+      color: var(--content-text-color);
+  }
 }
 
-.theme-light .corner::after {
-  content: "";
-  border-bottom: 1px solid var(--content-text-color);
-  border-left: 1px solid var(--content-text-color);
-}
-
-.theme-light .header__theme-menu-button {
-  color: var(--content-text-color);
-}
-
-.theme-light .header__theme-menu-button:hover {
-  outline: 1px solid var(--hover-color);
-}
-
-.theme-light .header__theme-menu-button:focus-visible {
-  text-decoration: underline;
-  outline: none;
-}
-
-.theme-light .header__theme-menu-button_active {
-  border: 1px solid var(--content-text-color);
-}
-
-.theme-light .title-decor {
-  color: var(--content-text-color);
-}
-
-.theme-light .title__theme-question {
-  color: var(--content-text-color);
-}  
-}
