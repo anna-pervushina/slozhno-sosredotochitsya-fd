@@ -6,6 +6,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  overflow-x: hidden;
 }
 
 /* заголовок и декоративные элементы */
@@ -108,7 +109,7 @@
 
 .content__card {
   display: grid;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -130,12 +131,6 @@
 
 .content__article-text-link:focus-visible {
   outline: 1px solid var(--content-text-color);
-}
-
-.content__card {
-  display: grid;
-  grid-auto-flow: row;
-  gap: 10px;
 }
 
 .concentrate__first {
@@ -203,15 +198,6 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 95.7px;
-}
-
-.corner::before {
-  margin: 10px;
-}
-
-.corner::after {
-  block-size: 25px;
-  margin: 10px;
 }
 
 @media (width >= 780px) {
