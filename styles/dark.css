@@ -3,8 +3,8 @@
   Так стили написанные ниже будут иметь больший вес,
   чем стили в медиазапросе предпочтений пользователя
 */
-  --ibm__font: "IBM Plex mono";
-  --bg__image: url(../images/cover-image-dark.png);
+  --ibm-font: "IBM Plex mono";
+  --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --title-decor-color: #000028;
   --title-color: #db00ff;
@@ -13,6 +13,31 @@
   --content-text-color: #f1b2ce;
 }
 
-.theme-dark .decor__element, .theme-dark .decor__element::before, .theme-dark .decor__element::after {
+.theme-dark .page {
+  background-color: #000028;
+}
+
+.theme-dark .decor__element {
   display: initial;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ibm-font: "IBM Plex mono";
+    --bg-image: url(../images/cover-image-dark.png);
+    --accent-color: #ff0070;
+    --title-decor-color: #000028;
+    --title-color: #db00ff;
+    --dc-color: #ff0070;
+    --dc-hover-color: rgba(255, 0, 112, 0.4);
+    --content-text-color: #f1b2ce;
+  }
+  
+  .theme-dark .page {
+    background-color: #000028;
+  }
+  
+  .theme-dark .decor__element {
+    display: initial;
+  }
 }

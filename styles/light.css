@@ -3,7 +3,8 @@
   Так стили написанные ниже будут иметь больший вес,
   чем стили в медиазапросе предпочтений пользователя
 */
-  --bg__image: url(../images/cover-image-light.png);
+  --ibm-font: "IBM Plex mono";
+  --bg-image: url(../images/cover-image-light.png);
   --content-text-color: #353430;
   --title-decor-color: #353430;
   --title-color: #ffc2e6;
@@ -12,14 +13,19 @@
   --dc-hover-color: rgba(53, 52, 48, 0.4);
 }
 
-.theme-light .decor__element, .theme-light .decor__element::before, .theme-light .decor__element::after {
+.theme-light .page {
+  background-color: #fff1f7;
+}
+
+.theme-light .decor__element {
   display: none;
 }
 
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg__image: url(../images/cover-image-light.png);
+    --ibm-font: "IBM Plex mono";
+    --bg-image: url(../images/cover-image-light.png);
     --content-text-color: #353430;
     --title-color: #ffc2e6;
     --accent-color: #ff8dcb;
@@ -27,7 +33,7 @@
     --dc-hover-color: rgba(53, 52, 48, 0.4);
   }
 
-  .theme-auto .decor__element, .theme-auto .decor__element::before, .theme-auto .decor__element::after {
+  .theme-auto .decor__element {
     display: none;
   }
 }

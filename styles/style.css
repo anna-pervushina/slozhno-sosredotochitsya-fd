@@ -1,8 +1,8 @@
 /* Основные стили проекта */
 .page {
   margin: 0 auto;
-  font-family: var(--ibm__font), monospace;
-  background-image: var(--bg__image);
+  font-family: var(--ibm-font), monospace;
+  background-image: var(--bg-image);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -42,12 +42,17 @@
   text-align: center;
   text-transform: lowercase;
   color: var(--dc-color);
-  padding: 1.5px 13px;
+  padding: 3.7px 13px;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
   border: 1px solid var(--dc-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -76,7 +81,7 @@
   color: var(--accent-color);
   top: 10px;
   right: 38px;
-  font-family: var(--ibm__font);
+  font-family: var(--ibm-font);
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -148,7 +153,7 @@
 }
 
 .title__theme-question {
-  font-family: var(--ibm__font), monospace;
+  font-family: var(--ibm-font), monospace;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -156,6 +161,11 @@
 }
 
 /* основной текстовый контент */
+.content__section {
+  display: grid;
+  margin: 0 10px 50px;
+  gap: 20px;
+}
 
 .content__card {
   display: grid;
@@ -165,12 +175,11 @@
 
 .content__article-text {
   color: var(--content-text-color);
-  font-family: var(--ibm__font), monospace;
+  font-family: var(--ibm-font), monospace;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
   text-align: left;
-  margin-bottom: 10px;
 }
 
 .content__article-text-link {
@@ -182,19 +191,23 @@
   border-bottom: 1px solid var(---content-text-color);
 }
 
+.content__article-text-link:focus {
+  outline: none;
+}
+
 .content__article-text-link:focus-visible {
   outline: 1px solid var(--content-text-color);
 }
 
-.content__section {
+.concentrate__hard {
   display: grid;
-  margin: 0 10px 40px;
+  grid-auto-flow: row;
+  padding: 40px 0 0 0;
   gap: 20px;
 }
 
-.concentrate__hard {
-  grid-auto-flow: row;
-  padding: 40px 0 0 0;
+.concentrate__hard p:first-of-type {
+  padding-bottom: 10px;
 }
 
 .title__less {
@@ -205,6 +218,7 @@
 .concentrate__less-container {
   display: grid;
   grid-auto-flow: row;
+  gap: 20px;
 }
 
 .concentrate__better {
@@ -225,6 +239,11 @@
   gap: 10px;
 }
 
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+
 .gallery__item {
   width: 100%;
   height: auto;
@@ -239,10 +258,11 @@
   min-block-size: 668px;
   padding: 10px;
   position: relative;
+  margin-top: -10px;
 }
 
 .footer__main-title {
-  font-family: var(--ibm__font), monospace;
+  font-family: var(--ibm-font), monospace;
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -250,11 +270,10 @@
   line-height: 95.7px;
 }
 
-@media (width >= 780px) {
+@media (width >= 768px) {
   .header {
       display: grid;
       grid-template-rows: 1fr min-content 1fr;
-      max-block-size: 100vh;
       padding: 20px;
       position: relative;
   }
@@ -263,7 +282,7 @@
   .header__theme-menu {
       display: grid;
       justify-content: end;
-      align-items: end;
+      align-items: center;
   }
 
   .header__theme-menu-list {
@@ -288,6 +307,7 @@
       font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
       text-align: left;
       text-wrap: wrap;
+      margin-left: -20px;
   }
 
   .header__paragraph {
@@ -310,7 +330,7 @@
   }
 
   .concentrate__less {
-      padding: 50px 0;
+      padding: 80px 0;
   }
 
   .title__question-less {
@@ -329,7 +349,7 @@
   .concentrate__better {
       grid-template-columns: 1fr 2fr;
       grid-auto-flow: row;
-      padding-bottom: 50px;
+      padding-bottom: 80px;
   }
 
   .content__card-better {
@@ -386,13 +406,13 @@
       display: grid;
       justify-content: center;
       align-items: center;
-      min-block-size: 100vh;
       padding: 20px;
       position: relative;
+      margin-top: 0;
   }
 
   .footer__main-title {
-      font-family: var(--ibm__font), monospace;
+      font-family: var(--ibm-font), monospace;
       color: var(--title-color);
       text-shadow: 4px 4px 0 var(--accent-color);
       font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -410,14 +430,8 @@
   }
 
   .header__theme-menu-list {
-      display: grid;
       grid-auto-flow: column;
       align-self: start;
-      gap: 10px;
-  }
-
-  .header__title {
-      margin-left: -20px;
   }
 
   .header__paragraph {
@@ -433,32 +447,18 @@
       padding-block-end: 10px;
   }
 
-  .concentrate__less {
-      padding: 80px 0;
+  .title__theme-question {
+    max-inline-size: 315px;
   }
 
   .concentrate__less-container {
       grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
-      padding-top: 20px;
   }
 
   .content__card-less {
-      margin-bottom: 10px;
       min-inline-size: 315px;
       gap: 10px;
   }
-
-  .concentrate__better {
-    padding-bottom: 80px;
-  }
-
-  .better-article {
-      padding-top: 10px;
-  }
-
-  .concentrate__images {
-      padding-bottom: 60px;
-  } 
 }
 }
