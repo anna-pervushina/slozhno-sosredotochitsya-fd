@@ -11,6 +11,7 @@
   --dc-color: #ff0070;
   --dc-hover-color: rgba(255, 0, 112, 0.4);
   --content-text-color: #f1b2ce;
+  --footer-accent: #ff0070;
 }
 
 .theme-dark .page {
@@ -31,6 +32,7 @@
     --dc-color: #ff0070;
     --dc-hover-color: rgba(255, 0, 112, 0.4);
     --content-text-color: #f1b2ce;
+    --footer-accent: #ff0070;
   }
   
   .theme-dark .page {

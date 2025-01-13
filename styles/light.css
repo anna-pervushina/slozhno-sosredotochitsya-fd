@@ -11,6 +11,7 @@
   --accent-color: #ff8dcb;
   --dc-color: #353430;
   --dc-hover-color: rgba(53, 52, 48, 0.4);
+  --footer-accent: #ff0070;
 }
 
 .theme-light .page {
@@ -21,7 +22,6 @@
   display: none;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     --ibm-font: "IBM Plex mono";
@@ -31,6 +31,7 @@
     --accent-color: #ff8dcb;
     --dc-color: #353430;
     --dc-hover-color: rgba(53, 52, 48, 0.4);
+    --footer-accent: #ff0070;
   }
 
   .theme-auto .decor__element {

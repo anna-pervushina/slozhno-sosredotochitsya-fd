@@ -412,12 +412,8 @@
   }
 
   .footer__main-title {
-      font-family: var(--ibm-font), monospace;
-      color: var(--title-color);
-      text-shadow: 4px 4px 0 var(--accent-color);
+      text-shadow: 2px 2px 0 var(--accent-color);
       font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-      font-weight: 700;
-      line-height: 95.7px;
   }
 
   .decor__element {
@@ -459,6 +455,10 @@
   .content__card-less {
       min-inline-size: 315px;
       gap: 10px;
+  }
+
+  .footer__main-title {
+    text-shadow: 2px 2px 0 var(--footer-accent);
   }
 }
 }
