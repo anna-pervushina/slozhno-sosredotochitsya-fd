@@ -188,7 +188,7 @@
 }
 
 .content__article-text-link:hover {
-  border-bottom: 1px solid var(---content-text-color);
+  border-bottom: 1px solid var(--content-text-color);
 }
 
 .content__article-text-link:focus {
