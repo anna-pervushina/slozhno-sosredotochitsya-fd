@@ -1,10 +1,10 @@
 :root.theme-light {
   /* сохраните этот селектор в приведённом виде.
-  Так стили написанные ниже будут иметь больший вес,
-  чем стили в медиазапросе предпочтений пользователя
+Так стили написанные ниже будут иметь больший вес,
+чем стили в медиазапросе предпочтений пользователя
 */
-  --ibm-font: "IBM Plex mono";
   --bg-image: url(../images/cover-image-light.png);
+  --bg-color: #fff1f7;
   --content-text-color: #353430;
   --title-decor-color: #353430;
   --title-color: #ffc2e6;
@@ -14,27 +14,24 @@
   --footer-accent: #ff0070;
 }
 
-.theme-light .page {
-  background-color: #fff1f7;
-}
-
 .theme-light .decor__element {
   display: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --ibm-font: "IBM Plex mono";
-    --bg-image: url(../images/cover-image-light.png);
-    --content-text-color: #353430;
-    --title-color: #ffc2e6;
-    --accent-color: #ff8dcb;
-    --dc-color: #353430;
-    --dc-hover-color: rgba(53, 52, 48, 0.4);
-    --footer-accent: #ff0070;
+      --bg-image: url(../images/cover-image-light.png);
+      --bg-color: #fff1f7;
+      --content-text-color: #353430;
+      --title-decor-color: #353430;
+      --title-color: #ffc2e6;
+      --accent-color: #ff8dcb;
+      --dc-color: #353430;
+      --dc-hover-color: rgba(53, 52, 48, 0.4);
+      --footer-accent: #ff0070;
   }
 
   .theme-auto .decor__element {
-    display: none;
+      display: none;
   }
 }

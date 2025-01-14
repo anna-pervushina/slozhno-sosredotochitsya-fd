@@ -1,8 +1,8 @@
 :root {
-  --ibm__font: 'IBM Plex mono';
-  --bg__image: url(../images/cover-image-dark.png);
+  --ibm-font: 'IBM Plex mono';
+  --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #FF0070;
   --title-decor-color: #000028;
   --title-color: #DB00FF;
-  --content__text-color: #F1B2CE;
+  --content-text-color: #F1B2CE;
 }
